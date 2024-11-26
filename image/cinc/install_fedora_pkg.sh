@@ -16,7 +16,7 @@ systemctl mask \
 	systemd-udevd.service \
 	systemd-vconsole-setup.service
 
-dnf -y --skip-broken install \
+dnf -y install \
   autoconf \
   automake \
   conntrack-tools \
@@ -58,7 +58,8 @@ dnf -y --skip-broken install \
   tcpdump \
   uuid.x86_64 \
   which  \
-  initscripts
+  initscripts \
+  --skip-broken 
 
 # Generate variation of dhclient-script that we can use for fake vm namespaces.
 # dhclient-script might not be available though, so don't fail if that's
