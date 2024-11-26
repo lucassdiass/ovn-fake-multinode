@@ -16,7 +16,7 @@ systemctl mask \
 	systemd-udevd.service \
 	systemd-vconsole-setup.service
 
-dnf -y --skip-broken install \
+dnf -y install --skip-broken \
   autoconf \
   automake \
   conntrack-tools \
